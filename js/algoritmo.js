@@ -20,7 +20,7 @@ function procesar(){
     var porcentaje = document.getElementById('porcentaje').value;
     var nombre = document.getElementById('nombre').value;
     var cuotas = document.getElementById('cuotas').value;
-    if(porcentaje === "" || importe === ""){ 
+    if(porcentaje === ""){ 
         Swal.fire({
             position: 'center',
             icon: 'error',
