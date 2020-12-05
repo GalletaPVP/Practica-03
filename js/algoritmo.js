@@ -42,7 +42,7 @@ function procesar(){
     }else{
         total_interes = importe * porcentaje;
         total_pagar = Number(importe) + Number(total_interes);
-        document.getElementById('total_interes').value = Math.round(total_interes);
+        document.getElementById('total_interes').value = total_interes;
         document.getElementById('total_pagar').value = Math.round(total_pagar);
     }
 }
