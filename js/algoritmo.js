@@ -15,13 +15,14 @@ function calculo(){
         document.getElementById('porcentaje').innerText = '10%';
     }
 }
-
 function procesar(){
     var importe = document.getElementById('importe').value;
     var porcentaje = document.getElementById('porcentaje').value;
     var nombre = document.getElementById('nombre').value;
     var cuotas = document.getElementById('cuotas').value;
-    if(porcentaje === "" || importe === ""){
+    var total_interes = 0,
+        total_pagar = 0;
+    if(porcentaje === "" || importe === ""){ 
         Swal.fire({
             position: 'center',
             icon: 'error',
@@ -46,7 +47,6 @@ function procesar(){
         document.getElementById('total_pagar').value = Math.round(total_pagar);
     }
 }
-
 function borrar(){
     document.getElementById('nombre').value = '';
     document.getElementById('importe').value = '';
@@ -54,7 +54,6 @@ function borrar(){
     document.getElementById('total_interes').value = '';
     document.getElementById('total_pagar').value = '';
 }
-
 document.getElementById('tipo_prestamo').addEventListener('select', calculo)
 document.getElementById('procesar').addEventListener('click', procesar)
 document.getElementById('borrar').addEventListener('click', borrar)
