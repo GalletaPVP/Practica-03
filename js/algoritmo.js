@@ -20,8 +20,6 @@ function procesar(){
     var porcentaje = document.getElementById('porcentaje').value;
     var nombre = document.getElementById('nombre').value;
     var cuotas = document.getElementById('cuotas').value;
-    var total_interes = 0,
-        total_pagar = 0;
     if(porcentaje === "" || importe === ""){ 
         Swal.fire({
             position: 'center',
