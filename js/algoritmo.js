@@ -20,20 +20,29 @@ function procesar(){
     var porcentaje = document.getElementById('porcentaje').value;
     var nombre = document.getElementById('nombre').value;
     var cuotas = document.getElementById('cuotas').value;
-    if(porcentaje === ""){ 
+    if(porcentaje === 0){
         Swal.fire({
             position: 'center',
             icon: 'error',
-            title: 'Ingrese los valores faltantes',
+            title: 'Falta seleccionar tipo',
             showConfirmButton: false,
             timer: 3000,
             timerProgressBar: true
         })
-    }else if(nombre === "" || cuotas === ""){
+    }else if(nombre === ""){
         Swal.fire({
             position: 'center',
             icon: 'error',
-            title: 'Ingrese los valores faltantes',
+            title: 'Falta el valor nombre',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true
+        })
+    }else if(importe === "" || cuotas === ""){
+        Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: 'Ingrese los valores importe o cuotas',
             showConfirmButton: false,
             timer: 3000,
             timerProgressBar: true
@@ -52,6 +61,12 @@ function borrar(){
     document.getElementById('total_interes').value = '';
     document.getElementById('total_pagar').value = '';
 }
+(function(){
+    'use strict';
+    document.addEventListener('DOMContentLoaded', function(){
+        document.getElementById('porcentaje').value = 0;
+    })
+})()
 document.getElementById('tipo_prestamo').addEventListener('select', calculo)
 document.getElementById('procesar').addEventListener('click', procesar)
 document.getElementById('borrar').addEventListener('click', borrar)
