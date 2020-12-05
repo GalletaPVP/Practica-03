@@ -18,6 +18,7 @@ function calculo(){
 }
 
 function procesar(){
+    var porcentaje=0;
     var importe = document.getElementById('importe').value;
     var porcentaje = document.getElementById('porcentaje').value;
     var nombre = document.getElementById('nombre').value;
