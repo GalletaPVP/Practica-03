@@ -18,7 +18,6 @@ function calculo(){
 }
 
 function procesar(){
-    var porcentaje=0;
     var importe = document.getElementById('importe').value;
     var porcentaje = document.getElementById('porcentaje').value;
     var nombre = document.getElementById('nombre').value;
@@ -42,6 +41,7 @@ function procesar(){
             timerProgressBar: true
         })
     }else{
+        var porcentaje=0;
         total_interes = importe * porcentaje;
         total_pagar = Number(importe) + Number(total_interes);
         document.getElementById('total_interes').value = Math.round(total_interes);
