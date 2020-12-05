@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practica</title>
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="css/normalize.css">
+    </head>
+    <body>
+        <div class="contenedor">
+                <div class="cabecera">
+                    <h1>SIMULADOR DE PRESTAMOS</h1>
+                </div>
+                <div class="cuerpo">
+                    <div class="campo">
+                        <label for="tipo_prestamo">Tipo de Préstamo</label>
+                        <select name="Tipos de préstamos" id="tipo_prestamo" onchange="calculo();">
+                            <option value="1">Hipotecario</option>
+                            <option value="2">Vivienda</option>
+                            <option value="3">Sueldo</option>
+                            <option value="4">Negocio</option>
+                        </select>
+                        <label for="Porcentaje" id="porcentaje"></label>
+                    </div>
+                    <div class="campo">
+                        <label for="Nombre">Nombre</label>
+                        <input type="text" name="Nombre" id="nombre" required>
+                    </div>
+                    <div class="campo">
+                        <label for="importe">Importe</label>
+                        <input type="text" name="Importe" id="importe" required>
+                    </div>
+                    <div class="campo">
+                        <label for="cuotas">Cuotas</label>
+                        <input type="text" name="Cuotas" id="cuotas" required>
+                    </div>
+                    <div class="campo">
+                        <label for="total_interes">Total Interes</label>
+                        <input type="text" name="Total Interes" id="total_interes" disabled>
+                    </div>
+                    <div class="campo">
+                        <label for="total_pagar">Total a Pagar</label>
+                        <input type="text" name="Total a Pagar" id="total_pagar" disabled>
+                    </div>
+                </div>
+                <div class="pies">
+                    <button type="button" id="procesar">Calcular</button>
+                    <button type="button" id="borrar">Limpiar</button>
+                </div>
+        </div>
+        <script src="js/algoritmo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    </body>
+</html>
