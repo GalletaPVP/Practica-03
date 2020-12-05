@@ -1,7 +1,6 @@
 function calculo(){
     var tipo_prestamo = document.getElementById('tipo_prestamo');
     var valor = tipo_prestamo.options[tipo_prestamo.selectedIndex].text;
-    var porcentaje=0;
     if(valor === 'Hipotecario'){
         document.getElementById('porcentaje').value = 0.13;
         document.getElementById('porcentaje').innerText = '13%';
